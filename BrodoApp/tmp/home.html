@@ -1,0 +1,13 @@
+<md-list class="list-product-container">
+    <md-list-item class="md-3-line list-item-product" ng-repeat="item in products">
+        <div class="md-list-item-text">
+            <img ng-src="{{item.picture}}" class="md-card-image">
+            <p>Name : {{item.name}}</p>
+            <p>Price : {{item.price}}</p>
+            <p>Category : {{item.category}}</p>
+            <p>Description : {{item.description}}</p>
+            <md-button type="submit" class="md-raised" ng-click="addItem()"> Add to Cart </md-button>
+            <br/>
+        </div>
+    </md-list-item>
+</md-list>

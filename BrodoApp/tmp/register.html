@@ -1,0 +1,73 @@
+<form name="userForm">
+    <md-grid-list md-cols="4" md-row-height="20px">
+
+        <md-grid-tile md-colspan="4" md-rowspan="3">
+            <md-input-container>
+                <label>Name</label>
+                <input type="text" name="name" ng-model="name" required>
+                <div ng-messages="userForm.name.$error" ng-show="userForm.name.$dirty">
+                    <div ng-message="required">Please fill name!</div>
+                </div>
+            </md-input-container>
+        </md-grid-tile>
+
+        <md-grid-tile md-colspan="4" md-rowspan="3">
+            <md-input-container>
+                <label>Last Name</label>
+                <input type="text" name="lastName" ng-model="lastName" required>
+                <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
+                    <div ng-message="required">Please fill last name!</div>
+                </div>
+            </md-input-container>
+        </md-grid-tile>
+
+        <md-grid-tile md-colspan="4" md-rowspan="3">
+            <md-input-container>
+                <label>City</label>
+                <input type="text" name="city" ng-model="city" required>
+                <div ng-messages="userForm.city.$error" ng-show="userForm.city.$dirty">
+                    <div ng-message="required">Please fill city!</div>
+                </div>
+            </md-input-container>
+        </md-grid-tile>
+
+        <md-grid-tile md-colspan="4" md-rowspan="3">
+            <md-input-container>
+                <label>Email</label>
+                <input type="email" name="email" ng-model="email" required>
+                <div ng-messages="userForm.email.$error" ng-show="userForm.email.$dirty">
+                    <div ng-message="required">Please fill email!</div>
+                    <div ng-message="email">Your email address is invalid!</div>
+                </div>
+            </md-input-container>
+        </md-grid-tile>
+
+        <md-grid-tile md-colspan="4" md-rowspan="3">
+            <md-input-container>
+                <label>Password</label>
+                <input type="password" name="password" ng-model="password" required></input>
+                <div ng-messages="userForm.password.$error" ng-show="userForm.password.$dirty">
+                    <div ng-message="required">Please fill password!</div>
+                </div>
+            </md-input-container>
+        </md-grid-tile>
+
+        <md-grid-tile md-colspan="4" md-rowspan="3">
+            <md-input-container>
+                <label>Re-type Password</label>
+                <input type="password" name="password2" ng-model="password2" required></input>
+                <div ng-messages="userForm.password2.$error" ng-show="userForm.password2.$dirty">
+                    <div ng-message="required">Please fill re-type password!</div>
+                </div>
+            </md-input-container>
+        </md-grid-tile>
+
+        <md-grid-tile md-colspan="4" md-rowspan="3">
+            <md-button type="submit" class="md-raised" ng-click="userForm.$valid && register()"> REGISTER </md-button>
+        </md-grid-tile>
+
+        <md-grid-tile md-colspan="4" md-rowspan="1">
+        </md-grid-tile>
+
+    </md-grid-list>
+</form>

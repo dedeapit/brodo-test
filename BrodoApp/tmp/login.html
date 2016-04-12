@@ -1,0 +1,40 @@
+<form name="userForm">
+    <md-grid-list md-cols="4" md-row-height="20px">
+
+        <md-grid-tile md-colspan="4" md-rowspan="3">
+            <md-input-container>
+                <label>Email</label>
+                <input type="email" name="email" ng-model="email" required>
+                <div ng-messages="userForm.email.$error" ng-show="userForm.email.$dirty">
+                    <div ng-message="required">Please fill email!</div>
+                    <div ng-message="email">Your email address is invalid!</div>
+                </div>
+            </md-input-container>
+        </md-grid-tile>
+
+        <md-grid-tile md-colspan="4" md-rowspan="3">
+            <md-input-container>
+                <label>Password</label>
+                <input type="password" name="password" ng-model="password" required></input>
+                <div ng-messages="userForm.password.$error" ng-show="userForm.password.$dirty">
+                    <div ng-message="required">Please fill password!</div>
+                </div>
+            </md-input-container>
+        </md-grid-tile>
+
+        <md-grid-tile md-colspan="4" md-rowspan="3">
+            <md-button type="submit" class="md-raised" ng-click="userForm.$valid && login()"> Login </md-button>
+        </md-grid-tile>
+
+        <md-grid-tile md-colspan="4" md-rowspan="1">
+            <md-button ng-click="goToForgetPassword()"> Forget Password </md-button>
+        </md-grid-tile>
+        <md-grid-tile md-colspan="4" md-rowspan="1">
+            <md-button ng-click="goToRegister()"> Register </md-button>
+        </md-grid-tile>
+
+        <md-grid-tile md-colspan="4" md-rowspan="1">
+        </md-grid-tile>
+
+    </md-grid-list>
+</form>
