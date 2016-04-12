@@ -1,0 +1,4 @@
+service\Application.class
+service\Product.class
+service\ProductController.class
+service\ProductList.class
